@@ -1,0 +1,114 @@
+@import "../../../styles/scss/colors";
+@import "../../../styles/scss/mixins";
+
+.product {
+  background: $white;
+  border-radius: 2px;
+  .productImage {
+    overflow: hidden;
+    position: relative;
+    border-radius: 2px 2px 0 0;
+    // max-height: 200px;
+    padding-top: 100%;
+    img {
+      position: absolute;
+      border: 0;
+      vertical-align: top;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      @media (min-width: 991px) {
+        min-height: 200px;
+      }
+    }
+  }
+  .productName {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+  .productPrice {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 16px;
+    &:before {
+      content: "£";
+    }
+  }
+  .productName,
+  .productPrice {
+    color: $gray-medium;
+    padding: 0 16px;
+    text-align: center;
+  }
+  .productAction {
+    padding: 16px;
+    button {
+      @include button-basic;
+      width: 100%;
+      transition: all 300ms ease-in;
+      &.added {
+        background: $primary-orange;
+      }
+    }
+  }
+}
+
+.productWrapper {
+  // transition: 0.5s;
+  padding: 16px;
+  min-height: 355px;
+  min-width: 154px;
+  // flex-basis: calc(25% - 32px);
+  // flex: 1 0 0;
+  width: 25%;
+  // -webkit-flex-basis: calc(25%);
+  @media (max-width: 768px) {
+    width: 33.33%;
+    // -webkit-flex-basis: calc(33%);
+    padding: 8px;
+  }
+  @media (max-width: 480px) {
+    width: 50%;
+    // -webkit-flex-basis: 50%;
+    min-height: 313px;
+    padding: 8px;
+  }
+  @media (max-width: 320px) {
+    width: 100%;
+    // -webkit-flex-basis: 100%;
+  }
+}
+
+.product {
+  // display: inline-block;
+
+  // min-height: 355px;
+  // flex-basis: calc(25% - 32px);
+  // flex: 1 0 0;
+  // flex-basis: calc(25%);
+  // -webkit-flex-basis: calc(25%);
+  // @media (max-width: 768px) {
+  //   flex-basis: calc(33%);
+  //   -webkit-flex-basis: calc(33%);
+  //   margin: 8px;
+  // }
+  @media (max-width: 480px) {
+    // flex-basis: 50%;
+    // -webkit-flex-basis: 45%;
+    // min-height: 313px;
+    .product-name {
+      height: 20px;
+      overflow: hidden;
+    }
+    .product-action {
+      padding: 16px 8px;
+    }
+  }
+}
