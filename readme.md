@@ -97,8 +97,22 @@ Questions
 
 1. What best practices have you used in your solution?
 
-**Answer Here**
+**Node.js + Typescript**
+
+1. Used Strict type checking with Typescript.
+2. Properly organized code into modular and reusable components.
+3. Used Modern ES6+ sysntax and features to improve code readability and maintainability.
+4. Followed SOLID principles to make the code scalable and easy to maintain.
+5. Implemented error handing and logging to ensure the stability.
+
+**React.js + Next.js**
+1. Components and props to break down into smaller, reusable parts.
+2. Used hooks to manage state and side-effects in functional components.
+3. Used Typescript to catch errors and improve code quality.
+4. Code splitting to reduce the size of the inital payload and improve the performance of your application. 
 
 2. What further steps would you take to improve your solution given more time?
 
-**Answer Here**
+1. Write Unit Tests and maintain test coverage.
+2. Optimize performance by using lazy loadings and caching.
+3. Implement security measures, such as HTTPS, JWT authentication.
